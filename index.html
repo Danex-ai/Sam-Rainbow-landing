@@ -1,121 +1,332 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SAM-RAINBOW | Electrical Store eCommerce Template</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #222;
+    .gradient-bg {
+      background: linear-gradient(135deg, #3a86ff 0%, #8338ec 100%);
     }
-    header {
-      background: #3a86ff;
-      color: white;
-      padding: 2rem;
-      text-align: center;
+    .feature-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
     }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
+    .pricing-card:hover {
+      transform: scale(1.03);
     }
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
+    .screenshot {
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
-    .button {
-      background: white;
-      color: #3a86ff;
-      padding: 0.8rem 1.5rem;
-      border: none;
-      border-radius: 5px;
-      font-size: 1rem;
-      margin-top: 1rem;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-    }
-    section {
-      padding: 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-    h2 {
-      color: #3a86ff;
-    }
-    .features, .screenshots, .cta {
-      margin-top: 2rem;
-    }
-    .features ul {
-      list-style-type: square;
-      padding-left: 1.5rem;
-    }
-    .screenshots img {
-      width: 100%;
-      max-width: 600px;
-      margin: 1rem auto;
-      display: block;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      margin-top: 3rem;
-    }
-    @media(max-width: 600px) {
-      header h1 {
-        font-size: 2rem;
-      }
+    .screenshot:hover {
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     }
   </style>
 </head>
-<body>
-
-  <header>
-    <h1>SAM-RAINBOW Electrical Store Template</h1>
-    <p>Fully responsive eCommerce website built for electrical and electronics shops</p>
-    <a href="https://danex-ai.github.io/SAM-RAINBOW/" class="button" target="_blank">View Live Demo</a>
+<body class="font-['Poppins'] bg-gray-50 text-gray-800">
+  <!-- Header -->
+  <header class="gradient-bg text-white py-16 px-4 text-center">
+    <div class="max-w-4xl mx-auto">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">SAM-RAINBOW Electrical Store</h1>
+      <p class="text-xl md:text-2xl mb-8">Premium eCommerce Template for Electrical & Electronics Businesses</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="https://danex-ai.github.io/SAM-RAINBOW/" target="_blank" class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 shadow-lg">
+          <i class="fas fa-eye mr-2"></i> Live Demo
+        </a>
+        <a href="#pricing" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300">
+          <i class="fas fa-tags mr-2"></i> Pricing
+        </a>
+      </div>
+    </div>
   </header>
 
-  <section class="features">
-    <h2>⚡ Key Features</h2>
-    <ul>
-      <li>Modern UI design optimized for electrical stores</li>
-      <li>Responsive across mobile, tablet, and desktop</li>
-      <li>Product listing and detail view</li>
-      <li>Customer cart and checkout interface</li>
-      <li>Admin-ready backend integration support</li>
-      <li>Customizable codebase for Laravel, React, or plain HTML</li>
-    </ul>
+  <!-- Features Section -->
+  <section class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+        <i class="fas fa-bolt mr-2"></i> Powerful Features
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Everything you need to launch your electrical store online</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Fully Responsive</h3>
+        <p class="text-gray-600">Looks perfect on all devices from smartphones to desktops with adaptive layouts.</p>
+      </div>
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-shopping-cart"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Complete eCommerce</h3>
+        <p class="text-gray-600">Product listings, cart functionality, and checkout process ready to use.</p>
+      </div>
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-paint-brush"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Customizable Design</h3>
+        <p class="text-gray-600">Easy to modify colors, fonts, and layouts to match your brand identity.</p>
+      </div>
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-tachometer-alt"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Admin Dashboard</h3>
+        <p class="text-gray-600">Backend integration support for managing products, orders, and customers.</p>
+      </div>
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-search"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Advanced Search</h3>
+        <p class="text-gray-600">Customers can easily find electrical components with smart search filters.</p>
+      </div>
+      
+      <div class="feature-card bg-white p-6 rounded-xl shadow-md transition duration-300">
+        <div class="text-blue-500 text-4xl mb-4">
+          <i class="fas fa-code"></i>
+        </div>
+        <h3 class="text-xl font-semibold mb-2">Clean Code</h3>
+        <p class="text-gray-600">Well-documented codebase that works with Laravel, React, or plain HTML.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="screenshots">
-    <h2>🖼️ Screenshots</h2>
-    <img src="home.jpg" alt="Homepage Screenshot">
-    <img src="store.jpg" alt="Product Screenshot">
+  <!-- Screenshots Section -->
+  <section class="py-16 px-4 bg-gray-100">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+          <i class="fas fa-images mr-2"></i> Template Preview
+        </h2>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">See how your electrical store could look</p>
+      </div>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="screenshot bg-white p-2 rounded-lg overflow-hidden transition duration-300">
+          <img src="home.jpg" alt="Homepage" class="w-full rounded-lg">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Modern Homepage</h3>
+            <p class="text-gray-600">Showcase featured products and promotions</p>
+          </div>
+        </div>
+        
+        <div class="screenshot bg-white p-2 rounded-lg overflow-hidden transition duration-300">
+          <img src="store.jpg" alt="Product Page" class="w-full rounded-lg">
+          <div class="p-4">
+            <h3 class="font-semibold text-lg">Product Catalog</h3>
+            <p class="text-gray-600">Organized display of electrical components</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="cta">
-    <h2>💼 Pricing & Services</h2>
-    <p>Choose how you want to use SAM-RAINBOW:</p>
-    <ul>
-      <li><strong>Template Only:</strong> $25 (one-time) – full source code with documentation</li>
-      <li><strong>Custom Setup:</strong> From $100 – tailored to your brand/store</li>
-      <li><strong>Full Package:</strong> From $250 – includes hosting, branding, training & setup</li>
-    </ul>
-    <p>Payments accepted via PayPal, Paystack, or direct bank transfer (Nigeria).</p>
-    <p><a href="mailto:samuelogundipe26@gmail.com" class="button">Contact Me</a></p>
+  <!-- Pricing Section -->
+  <section id="pricing" class="py-16 px-4 max-w-6xl mx-auto">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-blue-600 mb-4">
+        <i class="fas fa-tags mr-2"></i> Pricing Options
+      </h2>
+      <p class="text-lg text-gray-600 max-w-2xl mx-auto">Choose the package that fits your business needs</p>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div class="pricing-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+        <div class="bg-gray-100 p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Template Only</h3>
+          <div class="text-4xl font-bold text-blue-600 mb-2">$25</div>
+          <p class="text-gray-600">One-time payment</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Full source code</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Detailed documentation</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Basic support</span>
+            </li>
+            <li class="flex items-center text-gray-400">
+              <i class="fas fa-times text-red-400 mr-2"></i>
+              <span>No customization</span>
+            </li>
+          </ul>
+          <button class="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 py-3 rounded-lg font-semibold transition duration-300">
+            Get Template
+          </button>
+        </div>
+      </div>
+      
+      <div class="pricing-card bg-white rounded-xl shadow-lg overflow-hidden transition duration-300 transform scale-105 relative">
+        <div class="absolute top-0 right-0 bg-yellow-400 text-yellow-900 px-3 py-1 text-xs font-bold rounded-bl-lg">
+          POPULAR
+        </div>
+        <div class="bg-blue-600 p-6 text-center text-white">
+          <h3 class="text-xl font-semibold mb-2">Custom Setup</h3>
+          <div class="text-4xl font-bold mb-2">$100+</div>
+          <p>Tailored to your needs</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Everything in Basic</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Brand customization</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Additional features</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Priority support</span>
+            </li>
+          </ul>
+          <button class="w-full gradient-bg hover:opacity-90 text-white py-3 rounded-lg font-semibold transition duration-300">
+            Contact for Quote
+          </button>
+        </div>
+      </div>
+      
+      <div class="pricing-card bg-white rounded-xl shadow-md overflow-hidden transition duration-300">
+        <div class="bg-gray-100 p-6 text-center">
+          <h3 class="text-xl font-semibold mb-2">Full Package</h3>
+          <div class="text-4xl font-bold text-blue-600 mb-2">$250+</div>
+          <p class="text-gray-600">Complete solution</p>
+        </div>
+        <div class="p-6">
+          <ul class="space-y-3 mb-6">
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Everything in Custom</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Hosting setup</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Training & support</span>
+            </li>
+            <li class="flex items-center">
+              <i class="fas fa-check text-green-500 mr-2"></i>
+              <span>Maintenance package</span>
+            </li>
+          </ul>
+          <button class="w-full bg-gray-800 hover:bg-gray-900 text-white py-3 rounded-lg font-semibold transition duration-300">
+            Get Complete Package
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+      <h3 class="text-xl font-semibold text-blue-800 mb-2">Payment Methods</h3>
+      <p class="text-gray-700 mb-4">We accept PayPal, Paystack, or direct bank transfer (Nigeria)</p>
+      <div class="flex justify-center space-x-6 text-3xl text-gray-600">
+        <i class="fab fa-paypal"></i>
+        <i class="fas fa-university"></i>
+        <i class="fas fa-money-bill-wave"></i>
+      </div>
+    </div>
   </section>
 
-  <footer>
-    Made with ❤️ by Samuel Ogundipe • <a href="https://github.com/Danex-ai/SAM-RAINBOW" target="_blank">View on GitHub</a>
+  <!-- CTA Section -->
+  <section class="py-16 px-4 gradient-bg text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Power Up Your Online Store?</h2>
+      <p class="text-xl mb-8">Get your electrical business online with a professional eCommerce solution tailored for your needs.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="mailto:samuelogundipe26@gmail.com" class="bg-white text-blue-600 hover:bg-blue-50 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300 shadow-lg">
+          <i class="fas fa-envelope mr-2"></i> Contact Now
+        </a>
+        <a href="https://github.com/Danex-ai/SAM-RAINBOW" target="_blank" class="bg-transparent border-2 border-white hover:bg-white hover:text-blue-600 px-8 py-4 rounded-lg font-semibold text-lg transition duration-300">
+          <i class="fab fa-github mr-2"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-white py-12 px-4">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div>
+          <h3 class="text-xl font-semibold mb-4">SAM-RAINBOW</h3>
+          <p class="text-gray-400">Premium eCommerce template designed specifically for electrical and electronics stores.</p>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+          <ul class="space-y-2">
+            <li><a href="#" class="text-gray-400 hover:text-white transition duration-300">Features</a></li>
+            <li><a href="#pricing" class="text-gray-400 hover:text-white transition duration-300">Pricing</a></li>
+            <li><a href="https://danex-ai.github.io/SAM-RAINBOW/" target="_blank" class="text-gray-400 hover:text-white transition duration-300">Demo</a></li>
+            <li><a href="mailto:samuelogundipe26@gmail.com" class="text-gray-400 hover:text-white transition duration-300">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="text-xl font-semibold mb-4">Connect</h3>
+          <div class="flex space-x-4 text-2xl">
+            <a href="https://wa.me/2349160455349" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/share/1FwiHSEF8x/" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.instagram.com/samuelogundipe2/profilecard/?igsh=MWFmeGU3dXI2cnFlaA==" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/Danex-ai/SAM-RAINBOW" target="_blank" class="text-gray-400 hover:text-white transition duration-300"><i class="fab fa-github"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-gray-700 mt-8 pt-8 text-center text-gray-400">
+        <p>Made with <i class="fas fa-heart text-red-400"></i> by Samuel Ogundipe</p>
+        <p class="mt-2">© 2023 SAM-RAINBOW. All rights reserved.</p>
+      </div>
+    </div>
   </footer>
 
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="fixed bottom-8 right-8 bg-blue-600 text-white w-12 h-12 rounded-full shadow-lg opacity-0 invisible transition-all duration-300">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.remove('opacity-0', 'invisible');
+        backToTopButton.classList.add('opacity-100', 'visible');
+      } else {
+        backToTopButton.classList.remove('opacity-100', 'visible');
+        backToTopButton.classList.add('opacity-0', 'invisible');
+      }
+    });
+    
+    backToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
 </body>
-</html>
+            </html>
